@@ -129,7 +129,7 @@ const App = () => {
           onChange={changeHandler}
         />
         <br />
-        <button>Submit</button>
+        <button data-testid="submit">Submit</button>
       </form>
       {formIsValid ? <h1>Hello {username}</h1> : <p>{errorMessage}</p>}
     </div>
