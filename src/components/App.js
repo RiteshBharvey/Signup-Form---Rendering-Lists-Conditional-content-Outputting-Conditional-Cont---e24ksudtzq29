@@ -8,7 +8,7 @@ const App = () => {
   const [inputData, setInputData] = useState({
     name: "",
     email: "",
-    gender: "male",
+    gender: "",
     phoneNumber: "",
     password: ""
   });
@@ -73,7 +73,7 @@ const App = () => {
     setInputData({
       name: "",
       email: "",
-      gender: "male",
+      gender: "",
       phoneNumber: "",
       password: ""
     });
@@ -103,10 +103,10 @@ const App = () => {
         <select
           id="userGender"
           data-testid="gender"
-          value={inputData.gender}
+          value={inputData.gender || "male"}
           onChange={changeHandler}
         >
-          <option value="male">male</option>
+          <option value="male" selected={true}>male</option>
           <option value="female">female</option>
           <option value="other">other</option>
         </select>
