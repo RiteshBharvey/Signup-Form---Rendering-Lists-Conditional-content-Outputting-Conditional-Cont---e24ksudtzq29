@@ -23,7 +23,7 @@ const App = () => {
         return { ...prevInput, email: e.target.value };
       });
     } else if (e.target.id === "userGender") {
-      console.log(e.target.value);
+//       console.log(e.target.value);
       setInputData((prevInput) => {
         return { ...prevInput, gender: e.target.value };
       });
