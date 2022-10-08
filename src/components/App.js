@@ -8,7 +8,7 @@ const App = () => {
   const [inputData, setInputData] = useState({
     name: "",
     email: "",
-    gender: "",
+    gender: "male",
     phoneNumber: "",
     password: ""
   });
@@ -67,13 +67,13 @@ const App = () => {
       setErrorMessage("Password must contain atleast 6 letters");
       return;
     }
-    console.log(e.target);
+//     console.log(e.target);
     setFormIsvalid(true);
     setUsername(inputData.name);
     setInputData({
       name: "",
       email: "",
-      gender: "",
+      gender: "male",
       phoneNumber: "",
       password: ""
     });
@@ -103,10 +103,10 @@ const App = () => {
         <select
           id="userGender"
           data-testid="gender"
-          value={inputData.gender || "male"}
+          value={inputData.gender}
           onChange={changeHandler}
         >
-          <option value="male" selected={true}>male</option>
+          <option value="male">male</option>
           <option value="female">female</option>
           <option value="other">other</option>
         </select>
